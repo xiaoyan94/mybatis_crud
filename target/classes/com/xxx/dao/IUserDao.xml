@@ -5,7 +5,7 @@
 <mapper namespace="com.xxx.dao.IUserDao">
     <resultMap id="userMap" type="com.xxx.domain.User">
         <id property="id" column="id"/>
-        <result property="username" column="userame"/>
+        <result property="username" column="username"/>
     </resultMap>
 
     <select id="findTotal" resultType="long" parameterType="com.xxx.domain.QueryVo">SELECT COUNT(*) FROM user</select>
