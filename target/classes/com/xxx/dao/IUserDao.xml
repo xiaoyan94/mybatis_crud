@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxx.dao.IUserDao">
+    <resultMap id="userMap" type="com.xxx.domain.User">
+        <id property="id" column="id"/>
+        <result property="username" column="userame"/>
+    </resultMap>
+
+    <select id="findTotal" resultType="long" parameterType="com.xxx.domain.QueryVo">SELECT COUNT(*) FROM user</select>
+</mapper>

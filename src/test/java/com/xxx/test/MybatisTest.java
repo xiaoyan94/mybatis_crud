@@ -95,7 +95,7 @@ public class MybatisTest {
     public void testFindUserByVo(){
         QueryVo vo = new QueryVo();
         User user = new User();
-        user.setUsername("%王");
+        user.setUsername("%王%");
         vo.setUser(user);
         List<User> users = userDao.findUserByVo(vo);
         for (User u :
