@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -76,6 +77,7 @@ public class MybatisTest {
     public void testFindById(){
         User user = userDao.findById(48);
         System.out.println(user);
+        Assert.assertEquals(user.getId(),(Integer) 48);
     }
 
     @Test
